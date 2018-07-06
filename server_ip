@@ -1,2 +1,2 @@
-sh ./cf_dns_details | \
+sh $(dirname "$0")/cf_dns_details | \
 python3 -c "import sys, json; print(json.load(sys.stdin)['result'][0]['content'])"
